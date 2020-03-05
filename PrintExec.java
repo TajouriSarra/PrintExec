@@ -6,8 +6,10 @@ public class PrintExec {
 		int nbreArg = args.length;
 		
 		for (int i=0; i<nbreArg-2; i++) {
+			// Déplacer les fichiers .class dans le même répertoire du .java 
 			System.out.print("cd "+ args[i]+ " /cp "+ args[i]+ " " + args[nbreArg-2]);
 		}
+		
 		System.out.print("cd "+ args[nbreArg-2]+ " / javac "+ args[args.length-1]+".java");
 		
 		if (args[nbreArg].equals("true")) {
