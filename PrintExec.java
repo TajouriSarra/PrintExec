@@ -6,7 +6,7 @@ public class PrintExec {
 		int nbreArg = args.length;
 		
 		for (int i=0; i<nbreArg-2; i++) {
-			System.out.print("cd "+ args[i]+ " /ln -sv");
+			System.out.print("cd "+ args[i]+ " /cp "+ args[i]+ " " + args[nbreArg-2]);
 		}
 		System.out.print("cd "+ args[nbreArg-2]+ " / javac "+ args[args.length-1]+".java");
 		
